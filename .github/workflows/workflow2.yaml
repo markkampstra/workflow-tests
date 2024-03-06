@@ -6,6 +6,7 @@ on:
   workflow_run:
     workflows: [Workflow1]
     types: [completed]
+    branches: [test-branch1]
 
 jobs:
   job1:
