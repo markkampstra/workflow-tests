@@ -5,12 +5,8 @@ name: Workflow4
 on:
   push:
     branches: [test-branch2]
-  workflow_run:
-    workflows: [Workflow1]
-    types: [completed]
-    branches: [test-branch2,main]
-  # release:
-    # types: [published]
+  release:
+    types: [published]
 
 
 jobs:
