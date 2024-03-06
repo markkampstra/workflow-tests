@@ -3,6 +3,8 @@
 name: Workflow4
 
 on:
+  push:
+    branches: [test-branch2]
   workflow_run:
     workflows: [Workflow1]
     types: [completed]
