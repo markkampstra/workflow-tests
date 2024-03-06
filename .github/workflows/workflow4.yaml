@@ -20,3 +20,14 @@ jobs:
           echo "::notice file=workflow4.yaml::starting "
           sleep 10
           echo "::notice file=workflow4.yaml::This is step from Workflow4"
+
+  on-failure:
+    if: ${{ github.event.workflow_run.conclusion == 'failure' }}
+
+    runs-on:
+      labels: [ self-hosted, cloud, heavy ]
+      group: cloud
+
+    steps:
+      - run: echo '::error file=workflow4.yaml::The triggering workflow (Pull request) failed'
+

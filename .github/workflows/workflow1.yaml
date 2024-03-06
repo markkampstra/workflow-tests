@@ -11,3 +11,4 @@ jobs:
           echo "::notice file=workflow1.yaml::starting "
           sleep 60
           echo "::notice file=workflow1.yaml::This is step from Workflow1"
+          exit 1 # fail!
