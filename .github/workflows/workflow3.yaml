@@ -1,0 +1,22 @@
+---
+
+name: Workflow3
+
+on:
+  push:
+    branches:
+      - test-branch1
+  workflow_run:
+    workflows: [Workflow1]
+    types: [completed]
+    branches: [test-branch1]
+
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Step 1
+        run: |
+          echo "::notice file=workflow3.yaml::starting "
+          sleep 10
+          echo "::notice file=workflow3.yaml::This is step from Workflow3"
