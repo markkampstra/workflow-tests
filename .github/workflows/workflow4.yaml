@@ -9,6 +9,8 @@ on:
     workflows: [Workflow1]
     types: [completed]
     branches: [test-branch2,main]
+  release:
+    types: [published]
 
 
 jobs:
