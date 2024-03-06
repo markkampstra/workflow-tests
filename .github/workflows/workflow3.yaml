@@ -6,10 +6,11 @@ on:
   push:
     branches:
       - test-branch1
+      - test-branch2
   workflow_run:
     workflows: [Workflow1]
     types: [completed]
-    branches: [test-branch1]
+    branches: [test-branch1,test-branch2,main]
 
 
 jobs:
