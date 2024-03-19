@@ -15,7 +15,7 @@ jobs:
       - name: Step 1
         run: |
           echo "::notice file=workflow2.yaml::starting "
-          sleep 10
+          sleep 1
           echo "::notice file=workflow2.yaml::This is step from Workflow2"
       - name: Dump GitHub context
         env:
