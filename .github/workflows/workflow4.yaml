@@ -3,11 +3,8 @@
 name: Workflow4
 
 on:
-  push:
-    branches: [test-branch2]
   release:
     types: [published]
-
 
 jobs:
   job1:
@@ -18,3 +15,14 @@ jobs:
           echo "::notice file=workflow4.yaml::starting "
           sleep 10
           echo "::notice file=workflow4.yaml::This is step from Workflow4"
+      - name: Dump GitHub context
+        env:
+          GITHUB_CONTEXT: ${{ toJson(github) }}
+        run: |
+          echo "$GITHUB_CONTEXT"
+      - name: checkout
+        if: ${{ github.event_name == 'published' }}
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.workflow_run.head_sha }}
+          fetch-depth: 0
