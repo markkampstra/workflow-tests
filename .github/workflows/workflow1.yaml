@@ -11,4 +11,5 @@ jobs:
           echo "::notice file=workflow1.yaml::starting "
           sleep 1
           echo "::notice file=workflow1.yaml::This is step from Workflow1"
+          echo "::notice file=workflow1.yaml::Change from master no in PR"
           # exit 1 # fail!
