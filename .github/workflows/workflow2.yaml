@@ -31,4 +31,5 @@ jobs:
 
       - name: Debug
         run: |
-          echo 'Test PR'
+          echo 'Test PR 2'
+          cat .github/workflows/workflow2.yaml
