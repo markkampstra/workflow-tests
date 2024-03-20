@@ -26,3 +26,7 @@ jobs:
         with:
           ref: ${{ github.event.release.head_sha }}
           fetch-depth: 0
+      - name: Shas
+        run: |
+          echo "::notice file=workflow4.yaml::release.head_sha ${{github.event.release.head_sha}}"
+          echo "::notice file=workflow4.yaml::github.sha ${{github.sha}}"
