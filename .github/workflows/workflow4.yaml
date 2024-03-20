@@ -14,7 +14,7 @@ jobs:
         run: |
           echo "::notice file=workflow4.yaml::starting "
           sleep 10
-          echo "::notice file=workflow4.yaml::This is step from Workflow4"
+          echo "::notice file=workflow4.yaml::This is step from Workflow4 bla"
       - name: Dump GitHub context
         env:
           GITHUB_CONTEXT: ${{ toJson(github) }}
