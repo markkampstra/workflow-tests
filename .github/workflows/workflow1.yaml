@@ -1,7 +1,7 @@
 ---
 
 name: Workflow1
-on: push
+on: [push, pull_request_target]
 jobs:
   job1:
     runs-on: ubuntu-latest
