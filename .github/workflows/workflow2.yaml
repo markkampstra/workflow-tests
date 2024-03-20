@@ -31,4 +31,4 @@ jobs:
 
       - name: Debug
         run: |
-          echo 'Test PR'
+          echo 'Test PR2'
