@@ -12,4 +12,5 @@ jobs:
           sleep 1
           echo "::notice file=workflow1.yaml::This is step from Workflow1"
           echo "::notice file=workflow1.yaml::Change from master no in PR"
+          echo "::notice file=workflow1.yaml::Change2 from master not in PR, also visible in merge commit"
           # exit 1 # fail!
