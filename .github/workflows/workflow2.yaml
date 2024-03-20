@@ -36,3 +36,6 @@ jobs:
       - name: Debug
         run: |
           echo "::notice file=workflow2.yaml::This is from master"
+      - name: Debug2
+        run: |
+          echo "::notice file=workflow2.yaml::Change from PR, only visible when merged"
